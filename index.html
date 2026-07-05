@@ -6,7 +6,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>HRX AudioLab</title>
+<meta name="theme-color" content="#000000">
 
+<link rel="manifest" href="manifest.json">
+
+<link rel="apple-touch-icon" href="images/icon-192.png">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<meta name="apple-mobile-web-app-title" content="HRX AudioLab">
 <style>
 
 *{
@@ -170,6 +180,15 @@ const random=videos[Math.floor(Math.random()*videos.length)];
 document.getElementById("bgvideo").src=
 `https://www.youtube.com/embed/${random}?autoplay=1&mute=1&loop=1&playlist=${random}&controls=0&rel=0&modestbranding=1&playsinline=1`;
 
+</script>
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("/sw.js")
+      .then(reg => console.log("Service Worker registered"))
+      .catch(err => console.log("Service Worker failed", err));
+  });
+}
 </script>
 
 <div style="height:2px;"></div>
