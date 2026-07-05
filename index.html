@@ -24,6 +24,7 @@ font-family:Arial,Helvetica,sans-serif;
 }
 
 /* Background Video */
+
 iframe{
 position:fixed;
 top:50%;
@@ -39,32 +40,29 @@ z-index:1;
 }
 
 /* Dark Overlay */
+
 .overlay{
 position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,.30);
+inset:0;
+background:rgba(0,0,0,.35);
 z-index:2;
 }
 
 /* Watermark */
+
 .watermark{
 position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
+inset:0;
 background:url("images/hrx-watermark.png") center center no-repeat;
-background-size:65%;
-opacity:.05;
+background-size:140%;
+opacity:.018;
 pointer-events:none;
 z-index:3;
 filter:grayscale(100%);
 }
 
 /* Content */
+
 .content{
 position:fixed;
 top:50%;
@@ -73,6 +71,7 @@ transform:translate(-50%,-50%);
 text-align:center;
 color:#fff;
 z-index:4;
+user-select:none;
 }
 
 .content h1{
@@ -90,6 +89,7 @@ opacity:.85;
 }
 
 /* Mobile */
+
 @media(max-width:768px){
 
 iframe{
@@ -98,12 +98,12 @@ height:100vh;
 }
 
 .watermark{
-background-size:95%;
-opacity:.04;
+background-size:250%;
+opacity:.02;
 }
 
 .content h1{
-font-size:40px;
+font-size:42px;
 letter-spacing:4px;
 }
 
@@ -120,7 +120,7 @@ font-size:14px;
 <body>
 
 <iframe
-src="https://www.youtube.com/embed/videoseries?list=PLdnwY9KfM2JQ&autoplay=1&mute=1&loop=1&playlist=PLdnwY9KfM2JQ&controls=0&rel=0&modestbranding=1&playsinline=1"
+id="bgvideo"
 allow="autoplay; encrypted-media"
 allowfullscreen>
 </iframe>
@@ -133,6 +133,24 @@ allowfullscreen>
 <h1>HRX AudioLab</h1>
 <p>HIGH END MUSIC PRODUCTION</p>
 </div>
+
+<script>
+
+const videos=[
+"MbtBbdLSs6I",
+"emUQ9CQAtwE",
+"dxSghamkPho",
+"4XJePuR1C9I",
+"4aI0jdtU0w4",
+"NIPV_5ItCYw"
+];
+
+const random=videos[Math.floor(Math.random()*videos.length)];
+
+document.getElementById("bgvideo").src=
+`https://www.youtube.com/embed/${random}?autoplay=1&mute=1&loop=1&playlist=${random}&controls=0&rel=0&modestbranding=1&playsinline=1`;
+
+</script>
 
 </body>
 </html>
