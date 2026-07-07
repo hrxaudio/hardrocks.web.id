@@ -176,11 +176,16 @@ padding:9px 14px;
 }
 }
 
+
+/* Footer */
+.footer{position:fixed;left:0;bottom:4px;width:100%;text-align:center;font-size:11px;letter-spacing:2px;color:rgba(255,255,255,.22);z-index:5;pointer-events:none;user-select:none;}@media(max-width:768px){.footer{font-size:10px;letter-spacing:1px;bottom:4px;}}
+#splash{position:fixed;inset:0;background:#000;display:flex;justify-content:center;align-items:center;z-index:99999;transition:opacity .8s}#splash .logo{text-align:center;color:#fff}#splash h1{font-size:54px;letter-spacing:10px;opacity:.9}#splash p{margin-top:15px;font-size:14px;letter-spacing:4px;opacity:.5}
 </style>
 
 </head>
 
 <body>
+<div id='splash'><div class='logo'><h1>HRX</h1><p>HIGH END AUDIO PRODUCTION</p></div></div>
 
 <div class="refresh" onclick="location.reload()">↻</div>
 
@@ -233,6 +238,7 @@ if ("serviceWorker" in navigator) {
 }
 </script>
 
+<footer class='footer'>© 2026 HRX AudioLab • Rumbai • Indonesia</footer>
 <div style="height:2px;"></div>
-</body>
+<script>window.addEventListener('load',()=>{setTimeout(()=>{let s=document.getElementById('splash');s.style.opacity='0';setTimeout(()=>s.remove(),800)},1500)});</script></body>
 </html>
