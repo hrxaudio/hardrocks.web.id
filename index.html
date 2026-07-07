@@ -141,6 +141,41 @@ text-shadow:0 0 10px rgba(255,255,255,.05);
 
 }
 
+
+
+/* Trustpilot */
+.trustpilot{
+position:fixed;
+left:20px;
+bottom:20px;
+z-index:999;
+padding:10px 18px;
+border-radius:40px;
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);
+backdrop-filter:blur(12px);
+-webkit-backdrop-filter:blur(12px);
+color:rgba(255,255,255,.70);
+font-size:12px;
+letter-spacing:1px;
+text-decoration:none;
+transition:.35s;
+}
+.trustpilot:hover{
+background:#00b67a;
+border-color:#00b67a;
+color:#fff;
+box-shadow:0 0 20px rgba(0,182,122,.45);
+}
+@media(max-width:768px){
+.trustpilot{
+left:12px;
+bottom:12px;
+font-size:11px;
+padding:9px 14px;
+}
+}
+
 </style>
 
 </head>
@@ -158,6 +193,13 @@ allowfullscreen>
 <div class="overlay"></div>
 
 <div class="watermark"></div>
+
+<a class="trustpilot"
+href="https://www.trustpilot.com/review/hardrocks.web.id"
+target="_blank"
+rel="noopener noreferrer">
+★★★★★ Trustpilot
+</a>
 
 <div class="content">
 <h1>HRX AudioLab</h1>
