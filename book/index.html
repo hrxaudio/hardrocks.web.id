@@ -254,15 +254,23 @@ LANJUTKAN KE WHATSAPP
 <script>
 let selected='';
 function selectService(name){
+const btn=document.getElementById('waBtn');
+const cards=[...document.querySelectorAll('.service')];
+const current=event.currentTarget;
+if(selected===name){
+selected='';
+current.style.border='1px solid rgba(255,255,255,.08)';
+btn.style.display='none';
+return;
+}
 selected=name;
-document.querySelectorAll('.service').forEach(x=>x.style.border='1px solid rgba(255,255,255,.08)');
-event.currentTarget.style.border='2px solid #00b67a';
-document.getElementById('waBtn').style.display='block';
+cards.forEach(x=>x.style.border='1px solid rgba(255,255,255,.08)');
+current.style.border='2px solid #00b67a';
+btn.style.display='block';
 }
 document.getElementById('waBtn').onclick=function(e){
 e.preventDefault();
-const msg=`Halo HardRocks AudioLab.%0A%0ASaya ingin booking layanan:%0A${encodeURIComponent(selected)}%0A%0ANama:%0ATanggal:%0AJam:`;
-window.open('https://wa.me/628976610229?text='+msg,'_blank');
+window.open('https://wa.me/628976610229?text='+`Halo HardRocks AudioLab.%0A%0ASaya ingin booking layanan:%0A${encodeURIComponent(selected)}%0A%0ANama:%0ATanggal:%0AJam:`,'_blank');
 }
 </script></body>
 </html>
