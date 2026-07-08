@@ -1,18 +1,12 @@
 <!DOCTYPE html>
+
 <html lang="id">
-
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Book Studio | HardRocks AudioLab</title>
-
-<meta name="description" content="Book recording, rehearsal, mixing, mastering and production services at HardRocks AudioLab.">
-
-<meta name="theme-color" content="#000000">
-
+<meta content="Book recording, rehearsal, mixing, mastering and production services at HardRocks AudioLab." name="description"/>
+<meta content="#000000" name="theme-color"/>
 <style>
 
 *{
@@ -202,79 +196,45 @@ font-size:30px;
 }
 
 </style>
-
 </head>
-
 <body>
-
 <div class="card">
-
 <h1>BOOKING STUDIO</h1>
-
 <div class="subtitle">
 
 Silakan pilih layanan yang Anda butuhkan.
 
 </div>
-
-<div class="service">
-
-<h3>🎙 Recording Studio</h3>
-
+<div class="service" onclick="selectService('Professional multitrack recording.')" style="cursor:pointer;">
+<h3>
 <p>Professional multitrack recording.</p>
-
-</div>
-
-<div class="service">
-
+</h3></div>
+<div class="service" onclick="selectService('🥁 Studio Latihan Band')" style="cursor:pointer;">
 <h3>🥁 Studio Latihan Band</h3>
-
 <p>Comfortable rehearsal room for bands and solo artists.</p>
-
 </div>
-
-<div class="service">
-
-<h3>🎚 Mixing & Mastering</h3>
-
+<div class="service" onclick="selectService('🎚 Mixing &amp; Mastering')" style="cursor:pointer;">
+<h3>🎚 Mixing &amp; Mastering</h3>
 <p>Industry-standard audio finishing.</p>
-
 </div>
-
-<div class="service">
-
+<div class="service" onclick="selectService('🎼 Produksi Musik')" style="cursor:pointer;">
 <h3>🎼 Produksi Musik</h3>
-
 <p>From idea to final release.</p>
-
 </div>
-
-<div class="service">
-
+<div class="service" onclick="selectService('📡 Live Streaming')" style="cursor:pointer;">
 <h3>📡 Live Streaming</h3>
-
-<p>Music video, live session & visual content.</p>
-
+<p>Music video, live session &amp; visual content.</p>
 </div>
-
-<div class="service">
-
+<div class="service" onclick="selectService('🎸 Session Player')" style="cursor:pointer;">
 <h3>🎸 Session Player</h3>
-
-<p>Professional drummer & recording session support.</p>
-
+<p>Professional drummer &amp; recording session support.</p>
 </div>
-
-<a class="button"
-href="https://wa.me/628976610229?text=Hello%20HRX%20AudioLab,%20I%20would%20like%20to%20book%20a%20studio%20session."
-target="_blank">
+<a class="button" href="#" id="waBtn" style="display:none;" target="_blank">
 
 LANJUTKAN KE WHATSAPP
 
 </a>
-
 <div class="links">
-
 <a href="/">Home</a>
 
 |
@@ -284,17 +244,25 @@ LANJUTKAN KE WHATSAPP
 |
 
 <a href="/impressum">Impressum</a>
-
 </div>
-
 <div class="footer">
 
 © 2026 HardRocks AudioLab • Rumbai • Indonesia
 
 </div>
-
 </div>
-
-</body>
-
+<script>
+let selected='';
+function selectService(name){
+selected=name;
+document.querySelectorAll('.service').forEach(x=>x.style.border='1px solid rgba(255,255,255,.08)');
+event.currentTarget.style.border='2px solid #00b67a';
+document.getElementById('waBtn').style.display='block';
+}
+document.getElementById('waBtn').onclick=function(e){
+e.preventDefault();
+const msg=`Halo HardRocks AudioLab.%0A%0ASaya ingin booking layanan:%0A${encodeURIComponent(selected)}%0A%0ANama:%0ATanggal:%0AJam:`;
+window.open('https://wa.me/628976610229?text='+msg,'_blank');
+}
+</script></body>
 </html>
