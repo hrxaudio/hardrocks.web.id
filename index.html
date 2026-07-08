@@ -183,6 +183,53 @@ padding:9px 14px;
 /* Footer */
 .footer{position:fixed;left:0;bottom:4px;width:100%;text-align:center;font-size:11px;letter-spacing:2px;color:rgba(255,255,255,.22);z-index:5;pointer-events:none;user-select:none;}@media(max-width:768px){.footer{font-size:10px;letter-spacing:1px;bottom:4px;}}
 #splash{position:fixed;inset:0;background:#000;display:flex;justify-content:center;align-items:center;z-index:99999;transition:opacity .8s}#splash .logo{text-align:center;color:#fff}#splash h1{font-size:54px;letter-spacing:10px;opacity:.9}#splash p{margin-top:15px;font-size:14px;letter-spacing:4px;opacity:.5}
+.book-btn{
+
+display:inline-block;
+
+margin-top:40px;
+
+padding:16px 40px;
+
+background:#00b67a;
+
+color:#fff;
+
+text-decoration:none;
+
+border-radius:50px;
+
+font-weight:bold;
+
+letter-spacing:2px;
+
+transition:.3s;
+
+box-shadow:0 0 20px rgba(0,182,122,.30);
+
+}
+
+.book-btn:hover{
+
+background:#00c987;
+
+transform:translateY(-2px);
+
+}
+
+@media(max-width:768px){
+
+.book-btn{
+
+margin-top:30px;
+
+padding:14px 28px;
+
+font-size:14px;
+
+}
+
+}
 </style>
 
 </head>
@@ -212,6 +259,11 @@ allowfullscreen>
 <div class="content">
 <h1>HRX AudioLab</h1>
 <p>HIGH END AUDIO PRODUCTION</p>
+<a href="/book" class="book-btn">
+
+BOOK SESSION
+
+</a>
 </div>
 
 <script>
