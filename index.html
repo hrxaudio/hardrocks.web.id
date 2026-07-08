@@ -1,22 +1,16 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>HRX AudioLab</title>
-<meta name="theme-color" content="#000000">
-
-<link rel="manifest" href="manifest.json">
-
-<link rel="apple-touch-icon" href="images/icon-192.png">
-
-<meta name="apple-mobile-web-app-capable" content="yes">
-
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-
-<meta name="apple-mobile-web-app-title" content="HRX AudioLab">
+<meta content="#000000" name="theme-color"/>
+<link href="manifest.json" rel="manifest"/>
+<link href="images/icon-192.png" rel="apple-touch-icon"/>
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+<meta content="HRX AudioLab" name="apple-mobile-web-app-title"/>
 <style>
 
 *{
@@ -231,41 +225,30 @@ font-size:14px;
 
 }
 </style>
-
-</head>
-
+<style>.services{display:none;max-width:420px;margin:20px auto;text-align:left}.services.open{display:block}.head{padding:12px;background:rgba(255,255,255,.08);margin-top:8px;cursor:pointer}.body{display:none;padding:10px;background:rgba(255,255,255,.04)}.body button{width:100%;padding:12px;background:#00b67a;color:#fff;border:0;border-radius:8px}</style></head>
 <body>
-<div id='splash'><div class='logo'><h1>HRX</h1><p>HIGH END AUDIO PRODUCTION</p></div></div>
-
+<div id="splash"><div class="logo"><h1>HRX</h1><p>HIGH END AUDIO PRODUCTION</p></div></div>
 <div class="refresh" onclick="location.reload()">↻</div>
-<a class="trustpilot"
-href="https://www.trustpilot.com/review/hardrocks.web.id"
-target="_blank"
-rel="noopener noreferrer">
+<a class="trustpilot" href="https://www.trustpilot.com/review/hardrocks.web.id" rel="noopener noreferrer" target="_blank">
 ★★★★★ Trustpilot
 </a>
-<iframe
-id="bgvideo"
-allow="autoplay; encrypted-media"
-allowfullscreen>
+<iframe allow="autoplay; encrypted-media" allowfullscreen="" id="bgvideo">
 </iframe>
-
 <div class="overlay"></div>
-
 <div class="watermark"></div>
-
-
-
 <div class="content">
 <h1>HRX AudioLab</h1>
 <p>HIGH END AUDIO PRODUCTION</p>
-<a href="/book" class="book-btn">
+<a class="book-btn" href="javascript:void(0)" onclick="document.getElementById('services').classList.toggle('open')">
 
 BOOK SESSION
 
 </a>
-</div>
 
+<div class="services" id="services">
+<div class="item"><div class="head" onclick="toggle(this,'Recording Studio')">🎙 Recording Studio</div><div class="body"><button onclick="wa('Recording Studio')">BOOK VIA WHATSAPP</button></div></div>
+<div class="item"><div class="head" onclick="toggle(this,'Studio Latihan Band')">🥁 Studio Latihan Band</div><div class="body"><button onclick="wa('Studio Latihan Band')">BOOK VIA WHATSAPP</button></div></div>
+</div></div>
 <script>
 
 const videos=[
@@ -293,8 +276,7 @@ if ("serviceWorker" in navigator) {
   });
 }
 </script>
-
-<footer class='footer'>© 2026 HRX AudioLab • Rumbai • Indonesia</footer>
+<footer class="footer">© 2026 HRX AudioLab • Rumbai • Indonesia</footer>
 <div style="height:2px;"></div>
-<script>window.addEventListener('load',()=>{setTimeout(()=>{let s=document.getElementById('splash');s.style.opacity='0';setTimeout(()=>s.remove(),800)},1500)});</script></body>
+<script>window.addEventListener('load',()=>{setTimeout(()=>{let s=document.getElementById('splash');s.style.opacity='0';setTimeout(()=>s.remove(),800)},1500)});</script><script>function toggle(h,n){document.querySelectorAll('.body').forEach(b=>b.style.display='none');h.nextElementSibling.style.display='block'}function wa(n){window.open('https://wa.me/628976610229?text='+encodeURIComponent('Halo HardRocks AudioLab. Saya ingin booking '+n),'_blank')}</script></body>
 </html>
